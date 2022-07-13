@@ -11,7 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: "Install npm"
-        run: sudo apt install npm
-
+        run: |
+          apt install npm
+          apt install reveal-md
+          
       - name: Every time
         run: echo "This step will always run"
