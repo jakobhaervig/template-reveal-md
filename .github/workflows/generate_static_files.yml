@@ -12,9 +12,8 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: "Clean up static files"
-        run: |
-        rm -rf _static
-        mkdir _static
+        run: rm -rf _static
+        run: mkdir _static
 
       - name: "Install npm"
         run: sudo apt install npm
