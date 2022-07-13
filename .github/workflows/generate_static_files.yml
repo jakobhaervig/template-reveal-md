@@ -13,6 +13,8 @@ jobs:
 
       - name: "Clean up static files"
         run: rm -rf _static
+
+      - name: "make _static directory"
         run: mkdir _static
 
       - name: "Install npm"
