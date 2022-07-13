@@ -24,4 +24,4 @@ jobs:
         run: npm install -g reveal-md
 
       - name: "Build static files"
-        run: reveal-md --glob '**/*.md' --print slides.pdf --print-size A4
+        run: reveal-md --glob '**/*.md'
