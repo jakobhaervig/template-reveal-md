@@ -25,3 +25,6 @@ jobs:
 
       - name: "Build static files"
         run: reveal-md --static _static/
+
+      - name: "check files"
+        run: ls -la
