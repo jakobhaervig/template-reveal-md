@@ -24,4 +24,4 @@ jobs:
         run: npm install -g reveal-md
 
       - name: "Build static files"
-        run: reveal-md --static
+        run: reveal-md --static _static/
