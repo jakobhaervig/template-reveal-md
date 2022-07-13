@@ -3,8 +3,7 @@ name: Build static documents
 on:
   workflow_dispatch
   push:
-    branches:    
-      - 'main'
+    branches: [ 'main' ]
 
 jobs:
   greeting_job:
