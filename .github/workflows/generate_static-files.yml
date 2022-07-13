@@ -1,0 +1,28 @@
+name: Generate static files
+
+on:
+  push:
+    branches: [ 'main' ]
+
+jobs:
+  generate-static-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: "Clean up static files"
+        run: |
+        rm -rf _static
+        mkdir _static
+
+      - name: "Install npm"
+        run: sudo apt install npm
+
+      - name: "Install reveal-md"
+        run: npm install -g reveal-md
+
+      - name: "Build static files"
+        run: reveal-md --glob '**/*.md' --print slides.pdf --print-size A4
+
+        reveal-md **/*.md --static _static/
