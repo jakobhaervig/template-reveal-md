@@ -4,6 +4,8 @@ on:
   push:
     branches: [ 'main' ]
 
+  workflow_dispatch:
+
 jobs:
   generate-static-files:
     runs-on: ubuntu-latest
@@ -27,4 +29,7 @@ jobs:
         run: reveal-md --static _static/
 
       - name: "check files"
-        run: ls -la
+        run: ls -la _static/
+
+      - name: "Create dummy file"
+        run: touch dummy
