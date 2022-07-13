@@ -11,25 +11,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
-      - name: "Clean up static files"
-        run: rm -rf _static
+      # - name: "Clean up static files"
+      #   run: rm -rf _static
 
-      - name: "make _static directory"
-        run: mkdir _static
+      # - name: "make _static directory"
+      #   run: mkdir _static
 
-      - name: "Install npm"
-        run: sudo apt install npm
+      # - name: "Install npm"
+      #   run: sudo apt install npm
 
-      - name: "Install reveal-md"
-        run: npm install -g reveal-md
+      # - name: "Install reveal-md"
+      #   run: npm install --location=global reveal-md
 
-      - name: "Build static files"
-        run: reveal-md --static _static/
+      # - name: "Build static files"
+      #   run: reveal-md --static _static/
 
-      - name: "check files"
-        run: ls -la _static/
+      # - name: "check files"
+      #   run: ls -la _static/
 
       - name: "Create dummy file"
         run: touch dummy
