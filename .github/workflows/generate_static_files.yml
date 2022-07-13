@@ -23,5 +23,3 @@ jobs:
 
       - name: "Build static files"
         run: reveal-md --glob '**/*.md' --print slides.pdf --print-size A4
-
-        reveal-md **/*.md --static _static/
