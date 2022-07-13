@@ -28,9 +28,6 @@ jobs:
       - name: "Build static files"
         run: reveal-md --static _static/
 
-      - name: "check files"
-        run: ls -la _static/
-
       - name: "Deploy"
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
