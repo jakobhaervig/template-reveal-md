@@ -1,14 +1,17 @@
-name: Build static documents
+name: Build static files
 
 on:
   push:
     branches: [ 'main' ]
 
 jobs:
-  greeting_job:
+  build-static-files:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-      - name: "Build static documents"
-        run: echo "hello"
+      - name: "Install npm"
+        run: sudo apt install npm
+
+      - name: Every time
+        run: echo "This step will always run"
